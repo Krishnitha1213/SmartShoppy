@@ -1,0 +1,71 @@
+<input type="button" value="logout" class="btn btn-secondary logoutBtn" onclick="logoutUser()">
+
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="link_acct" aria-current="page" href="#" onclick="loadSelectedTab('acct')">User Account Details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="link_productList" href="#" onclick="loadSelectedTab('productList')">Product Details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="link_addProduct" href="#" onclick="loadSelectedTab('addProduct')">Add New Product</a>
+    </li>
+  </ul>
+
+
+<div class="tabContent acct_Block">
+  <div class="accountDetails">
+    <table class="table table-dark  table-striped-columns">
+        <thead>
+            <tr >
+                <th>User Id</th>
+                <th>Account Mail Id</th>
+                
+                <th>Is Admin</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="detailsBody"></tbody>
+    </table>
+</div>
+
+</div>
+<div class="tabContent productList_Block">Product list block</div>
+<div class="tabContent addProduct_Block">
+    <ul class="addProductDetailsBlock">
+      <h6 class="producthead">Add New Product</h6>
+      <li>
+        <input type="text" class="form-control" id="productName" placeholder=" Product name">
+      </li>
+      <li>
+        <input type="number" class="form-control" id="price" placeholder=" Product price">
+      </li>
+      <li>
+        <input type="number" class="form-control" maxlength="20" id="discount" placeholder="Product discount Percent">
+      </li>
+      <li>
+        <input type="text" class="form-control"  maxlength="20" id="manufacturer" placeholder=" Product Manufacturer">
+      </li>
+      <li>
+        <input type="text" class="form-control"  maxlength="100" id="desc" placeholder="Product Description">
+      </li>
+      
+      <li>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="productImage">
+            <input type="button" value="Upload" class="btn btn-secondary" onclick="uploadProductImage()">                
+        </form>  
+      </li>
+      <li>
+        <input class="range"  id="rating" type="range" min="1" max="5" value="1" step="1"
+         onmousemove="rangevalue1.value=value" /> <output id="rangevalue1"></output>
+      </li>
+      <li>
+        <input type="button" value="Add Product" class="btn btn-primary" onclick="addNewProductDetails()">  
+      </li>
+      <li id="rmsg">
+
+      </li>
+    </ul>
+</div>

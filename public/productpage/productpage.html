@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SmartShoppy-Login_page</title>
+        <script src="jquery.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="productLoading.js"></script>
+    </head>
+    <body>
+        <!-- Header section starts here -->
+        <header>
+            <nav>
+                <div class="leftlogo">
+                    <img src="images/biglogotransparent.png" alt="">
+                </div>
+            </nav>
+        </header>
+        <section class="middledetails">
+            <div class="products" id="templateContainer">
+                <div class="leftsidebar">
+                   <div class="filters">
+                      <h6 class="txt">FILTERS</h6>
+                      <h6 class="clear"><a href="#"> CLEAR ALL</a></h6>
+                   </div>
+                   <div class="radiobtns">
+                      <ul>
+                        <li><label ><input type="radio" name="category" id="catval">Men</label></li> 
+                        <li><label ><input type="radio" name="category" id="catval">Women</label></li> 
+                        <li><label ><input type="radio" name="category" id="catval">Boys</label></li> 
+                        <li><label ><input type="radio" name="category" id="catval">Girls</label></li> 
+                      </ul>
+                   </div>
+                   <div class="categories">
+                      <h6 class="cathead">Categories</h6>
+                      <ul>
+                        <li><label > <input type="checkbox" name="categories" id="cate_val"> Tshirts <span>(500)</span></label></li>
+                        <li><label > <input type="checkbox" name="categories" id="cate_val"> Shirts <span>(400)</span></label></li>
+                        <li><label > <input type="checkbox" name="categories" id="cate_val"> Jeans <span>(350)</span></label></li>
+                        <li><label > <input type="checkbox" name="categories" id="cate_val"> Trousers <span>(450)</span></label></li>
+                        <li><label > <input type="checkbox" name="categories" id="cate_val"> Casual shoes <span>(200)</span></label></li>
+                        <li><label > <input type="checkbox" name="categories" id="cate_val"> Sweatshirts <span>(600)</span></label></li>
+                        <li><label > <input type="checkbox" name="categories" id="cate_val"> Kurta sets <span>(550)</span></label></li>
+                      </ul>
+                      <div>
+                        <h6 class="morecat"><a href="#" onclick="showList()"> + 300 more</a></h6>
+                        <div class="FilterDirectory-panel FilterDirectory-expanded">
+                            <i class="bi bi-x-square-fill" onclick="closeList()"></i>
+                            <ul>
+                                <li><label > <input type="checkbox" name="categories" id="cate_val"> Tshirts <span>(500)</span></label></li>
+                                <li><label > <input type="checkbox" name="categories" id="cate_val"> Shirts <span>(500)</span></label></li>
+                                <li><label > <input type="checkbox" name="categories" id="cate_val"> Jeans <span>(500)</span></label></li>
+                                <li><label > <input type="checkbox" name="categories" id="cate_val"> Trousers <span>(500)</span></label></li>
+                                <li><label > <input type="checkbox" name="categories" id="cate_val"> Casual shoes <span>(500)</span></label></li>
+                                <li><label > <input type="checkbox" name="categories" id="cate_val"> Sweatshirts <span>(500)</span></label></li>
+                                <li><label > <input type="checkbox" name="categories" id="cate_val"> Kurta sets <span>(500)</span></label></li>
+                              </ul>
+                        </div>
+                      </div>
+                   </div>
+                   <div class="Brands">
+                      <h6 class="brandhead">Brands</h6>
+                        <ul>
+                            <li><label > <input type="checkbox" name="brands" id="brand_val"> Roadster <span>(600)</span></label></li>
+                            <li><label > <input type="checkbox" name="brands" id="brand_val"> Shirts <span>(450)</span></label></li>
+                            <li><label > <input type="checkbox" name="brands" id="brand_val"> Jeans <span>(300)</span></label></li>
+                            <li><label > <input type="checkbox" name="brands" id="brand_val"> Trousers <span>(650)</span></label></li>
+                            <li><label > <input type="checkbox" name="brands" id="brand_val"> Casual shoes <span>(500)</span></label></li>
+                            <li><label > <input type="checkbox" name="brands" id="brand_val"> Sweatshirts <span>(350)</span></label></li>
+                            <li><label > <input type="checkbox" name="brands" id="brand_val"> Kurta sets <span>(420)</span></label></li>
+                        </ul>
+                        <div>
+                           <h6 class="morebrands"><a href="#" onclick="showList()"> + 250 more</a></h6>
+                           <div class="FilterDirectory-panel FilterDirectory-expanded">
+                             <i class="bi bi-x-square-fill" onclick="closeList()"></i>
+                                <ul>
+                                    <li><label > <input type="checkbox" name="categories" id="cate_val"> Tshirts <span>(500)</span></label></li>
+                                    <li><label > <input type="checkbox" name="categories" id="cate_val"> Shirts <span>(500)</span></label></li>
+                                    <li><label > <input type="checkbox" name="categories" id="cate_val"> Jeans <span>(500)</span></label></li>
+                                    <li><label > <input type="checkbox" name="categories" id="cate_val"> Trousers <span>(500)</span></label></li>
+                                    <li><label > <input type="checkbox" name="categories" id="cate_val"> Casual shoes <span>(500)</span></label></li>
+                                    <li><label > <input type="checkbox" name="categories" id="cate_val"> Sweatshirts <span>(500)</span></label></li>
+                                    <li><label > <input type="checkbox" name="categories" id="cate_val"> Kurta sets <span>(500)</span></label></li>
+                                </ul>
+                           </div>
+                        </div>
+                   </div>
+                   <div class="prices"> 
+                    <h6 class="priceheads">Prices</h6>
+                        <ul>
+                             <li><label><input type="checkbox" name="pricing" id="price_val"> &#8377; 199 to &#8377; 999<span>(600)</span></label></li>
+                             <li><label><input type="checkbox" name="pricing" id="price_val"> &#8377; 999 to &#8377; 4990<span>(419)</span></label> </li>
+                             <li><label><input type="checkbox" name="pricing" id="price_val"> &#8377; 4999 to &#8377; 9999<span>(550)</span></label> </li>
+                             <li><label><input type="checkbox" name="pricing" id="price_val"> &#8377; 9999 to &#8377; 20000<span>(380)</span></label> </li> 
+                        </ul>
+                   </div>
+                   
+                </div>
+
+                <div class="rightsideproducts">
+                    <div class="shop" id="shop"> </div>
+                </div>
+            </div>
+              
+        </section>
+       
+        <!-- footer section starts here -->
+
+        <!-- Footer details section starts here -->
+        <footer>
+            <div class="footerlogo">
+                <h6 class="copyright">All Rights reserved and copy rights  &copy; to <b class="logotext">Smart Shoppy</b> </h6> 
+            </div>
+        </footer>
+    <!-- Footer details section Ends here -->
+    </body>
+
+     <script>
+        var showList = () => {
+            $(".FilterDirectory-expanded").slideToggle();
+        }
+        var closeList = () => {
+            $(".FilterDirectory-expanded").slideToggle();
+        }
+    </script>
+
+    <script src="Data.js"></script>
+    <script src="main.js"></script>
+   
+</html>

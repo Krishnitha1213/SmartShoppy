@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Womens Tops",
+        "price": 35000,
+        "discountPercent": 13,
+        "manufacturer": "Puma Clothes",
+        "desc": "A good quality product",
+        "rating": "4.5/5",
+        "image": "https://rukminim1.flixcart.com/image/800/960/k52s58w0/top/z/q/a/s-anshu-36-anshu-fashions-original-imafgnzubfhet7yt.jpeg?q=50"
+    },
+    {
+        "name": "Mens Black T-shirt",
+        "price": 23000,
+    "discountPercent": 11,
+        "manufacturer": "Levis",
+        "desc": "Mens Pure Black T-shirt",
+        "rating": "4.2/5",
+        "image": "https://rukminim1.flixcart.com/image/800/960/kzegk280/t-shirt/l/4/k/l-2-triptee-original-imagbf7kgf3f5gum.jpeg?q=50"
+    },
+    {
+        "name": "Mobile",
+        "price": 15000,
+    "discountPercent": 6,
+        "manufacturer": "OnePlus",
+        "desc": "Bigger high quality mobile",
+        "rating": "4.8/5",
+        "image": "https://static.digit.in/default/36b13ef36655eae101b44c7e0f14d79eb63a8935.jpeg?tr=1200"
+    },
+    {
+        "name": "KidsToy",
+        "price": 1200,
+    "discountPercent": 2,
+        "manufacturer": "Dafd",
+        "desc": "High quality toys for kids",
+        "rating": "4.9/5",
+        "image": "https://rukminim1.flixcart.com/image/416/416/l2krs7k0/stuffed-toy/q/v/r/cute-pikachu-25-cm-multicolor-25-qtypiy-original-imagdvxfwaex5hez.jpeg?q=70"
+    }
+]

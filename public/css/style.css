@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --custom_blue: #0C73EB;
+    --lightgrey: lightgrey;
+    --lightgray: lightgray;
+    --black: black;
+    --customblack: #152336;
+    --white: white;
+    --after-content:'2';
+}
+
+/* Login page css style sheet details started here */
+
+header{
+    background-color: var(--custom_blue) ;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 2px;
+    width: 100%;
+    z-index: 90
+  
+}
+nav{
+    display: flex;
+    margin: 5px 20px;
+    justify-content: space-between;
+}
+nav > .leftlogo > img{
+    width: 120px;
+    object-fit: fill;
+    height: 50px;
+}
+.login{
+    margin: 5px 5px;
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+.login:hover{
+    background-color: gold;
+}
+
+/* Middle login details */
+
+.middledetails{
+    width: 100%;
+    margin-top: 42px;
+    background-color: var(--white);
+    height: 584px;
+}
+.container{
+    display: flex;
+    padding: 60px 100px;
+    justify-content: space-between;
+}
+.container > img{
+    width: 530px;
+    object-fit: contain;
+    margin-top: 50px;
+    height: 370px;
+  
+}
+.heading{
+    font-size: 40px;
+    font-weight: 900;
+    width: 300px;
+    margin-bottom: 15px;
+    font-family: 'poppins';
+}
+.itemsContainer {
+   width: 350px;
+   padding: 10px 5px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 400px;
+   background-color: var(--white);
+}
+input::placeholder{
+    color: gray;
+    font-weight: 600;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+svg{
+    position: relative;
+    right: 45px;
+    width: 20px;
+    height: 20px;
+    color: var(--custom_blue);
+}
+.email > input{
+    width: 259px;
+    padding: 15px;
+    border-radius: 9px;
+    outline-style: none;
+    border: 1px solid var(--lightgrey);
+}
+.password > input{
+    width: 259px;
+    padding: 15px;
+    border-radius: 9px;
+    outline-style: none;
+    border: 1px solid var(--lightgrey);
+}
+.confirm_password > input{
+    width: 259px;
+    padding: 15px;
+    border-radius: 9px;
+    outline-style: none;
+    border: 1px solid var(--lightgrey);
+}
+input:hover{
+  border: 1px solid #0C73EB;
+}
+.checkbox{
+    display: flex;
+    position: relative;
+    right: 42px;
+    justify-content: space-evenly;  
+}
+label{
+    position: relative;
+    left: 5px;
+    margin-top: 5px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+.rememberme{
+    position: relative;
+    left: 5px;
+}
+span a{
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 80px;
+    color: var(--custom_blue);
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+span a:hover{
+    text-decoration: underline;
+}
+.loginbtn > input{
+    width: 259px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-family: 'Roboto';
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 9px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--custom_blue);
+ }
+ .loginbtn > input:hover{
+    background-color: rgb(8, 99, 202);
+ }
+.register{
+    font-size: 15px;
+    font-family: 'Roboto';
+}
+.register > a{
+    color: var(--custom_blue);
+    text-decoration: none;
+}
+.register > a:hover{
+    text-decoration: underline;
+}
+
+/* footer section starts */
+
+footer{
+    width: 100%;
+    position: fixed;
+    background-color: var(--custom_blue);
+    padding: 10px;
+    bottom: 0;
+}
+.copyright{
+    color: var(--white);
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+.logotext{
+    color: gold;
+}
+
+
+
+
+
+.errBlock {
+    display: none;    
+    color: red;
+}
+
+#templateContainer {
+    position: relative;
+    top: 15px;
+}
+ 
+#productDetailsBlock {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    overflow: hidden;
+    padding: 50px;  
+}
+/*
+#productDetailsBlock ul {
+    border: 1px solid;
+    width: 300px;
+   
+    margin: 10px;
+    background-color: #ccc;
+}
+
+#productDetailsBlock li {
+    list-style: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 5px;
+    padding: 5px;
+}
+#productDetailsBlock img {
+    width: 200px;
+    height: 150px;
+}
+
+.productDesc {
+    height: 65px;
+} */
+
+.categhead{
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.mainproducts{
+    width: 265px;
+    border: 1px solid lightgrey;
+    margin: 1% 10%;
+    border-radius: 5px ;
+    margin-top: 30px;
+    -webkit-border-radius: 5px ;
+    -moz-border-radius: 5px ;
+    -ms-border-radius: 5px ;
+    -o-border-radius: 5px ;
+}
+
+.flexitems{
+    height:450px;
+    width: 200px 10px;
+    position: relative;
+    border-radius: 8px;
+    background-color: white;
+   
+}
+.flexitems:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.pimg{
+    width:200px;
+    position: relative;
+    left: 25px;
+    object-fit: contain;
+    height: 240px;
+}
+.name, .price, .manufacturer, .desc, .rating {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.name a{
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: rgba(255, 0, 0, 0.829);
+}
+.price{
+    font-size: 20px;
+    position: relative;
+    bottom: 20px;
+    font-family: 'Roboto';
+    color: black;
+}
+.manufacturer{
+    color: var(--custom_blue);
+    position: relative;
+    bottom: 35px;
+    font-weight: 600;
+}
+.desc{
+    width: 120px;
+    word-wrap: break-word;
+    position: relative;
+    height: 63px;
+    left: 65px;
+    bottom: 49px;
+}
+.afterDiscount{
+    color: gray;
+    position: relative;
+    bottom: 5px;
+    font-size: 14px;
+}
+.rating{
+    position: relative;
+    bottom: 85px;
+    color: green;
+    font-weight: 900;
+}
+.bottombutton{
+    border: 1px solid brown;
+    padding: 5px;
+    background-image: linear-gradient(to right, yellow, orange);
+    position: relative;
+    left: 85px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    bottom: 85px;
+    width: 100px;
+    border-radius: 6px ; 
+}
+
+.logoutBtn {
+    position: absolute;
+    right: 10px;
+    top: -43px;
+    z-index: 100;
+}
+
+.bi-basket{
+    position: absolute;
+    right: 120px;
+    color: white;
+    top: -43px;
+    font-size: 25px;
+    z-index: 100;
+}
+.non-empty::after{
+    content: var(--after-content);
+    font-size: 15px;
+    width:25px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top:-10px;
+    right:20%;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+.cartAmount {
+    position: absolute;
+    z-index: 100;
+    top: -43px;
+    left: 1240px;
+    font-size: 12px;
+    width: 18px;
+    height: 20px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 1.5px 3px;
+    border-radius: 3px;
+}
+
+.cart{
+    width: 300px;
+    height: 558px;
+    position: relative;
+    float: right;
+    z-index: 100;
+    top: 2px;
+    background-color: white;
+    text-align: center;
+    overflow-y: auto;
+    display: none;
+    border: 1px solid black;
+  
+}
+
+.cartname{
+    font-weight: 900;
+    border-bottom: 1px solid lightgrey;
+}
+.bi-x-circle-fill{
+    position: relative;
+    right: 10px;
+    color: red;
+}
+.cart-wrapper{
+    display: flex;
+    padding: 10px;
+   
+}
+.cart-item{
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+.cart-item img{
+    width: 50px;
+    height: 100px;
+}
+.details h3{
+    font-size: 20px;
+    color: #0C73EB;
+    text-align: left;
+}
+.details p{
+    word-wrap: break-word;
+    text-align: left;
+    width:160px;
+}
+.cartprice{
+    position: relative;
+    top: 10px;
+    left: 95px;
+    font-size: 13px ;
+    font-weight: 900;
+}
+
+
+.subtotal{
+    text-align: right;
+    padding:5%;
+}
+.checkout, .view-cart{
+    width:95%;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--custom_blue);
+    font-size: large;
+    color: #fff;
+    margin:10px auto;
+    padding:10px 15px;
+}
+.view-cart{
+    background-color: #fff;
+    border: 2px solid var(--custom_blue);
+    color: var(--custom_blue);
+}
+
+#signupResult{
+    font-size: 20px;
+    position: absolute;
+    left: 150px;
+    width: 600px;
+    word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    top: 460px;
+    padding: 10px;
+    color: green;
+  
+}
+
+.nav-item{
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    font-family: 'poppins';
+    font-weight: 900;
+    margin-left: 100px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+.nav-item:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+.nav-item a{
+    color: #fff;
+}
+.nav-item a:hover{
+   color: white;
+  
+}
+.accountDetails{
+    margin-top: 10px;
+}
+.addProductDetailsBlock {
+    border: 2px solid var(--custom_blue);
+    margin: 20px auto;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 440px;
+    padding: 20px;
+    width: 40vw;
+}
+.addProductDetailsBlock li {
+    list-style: none;
+    padding: 5px;
+}
+.producthead{
+    font-size: 20px;
+    font-family: 'poppins';
+    margin-left: 10px;
+    font-weight: 600;
+}
+output {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    position: relative;
+    left: 10px;
+    bottom: 3px;
+    padding: .2em .6em;
+    background-color: #0C73EB;
+    border-radius: 50%;
+}
+
+         
+         
+         

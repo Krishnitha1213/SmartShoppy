@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --blue: blue;
+    --custom_blue: #0C73EB;
+    --lightgrey: lightgrey;
+    --lightgray: lightgray;
+    --black: black;
+    --customblack: #152336;
+    --white: white;
+}
+
+/* Login page css style sheet details started here */
+
+header{
+    background-color: var(--custom_blue) ;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 2px;
+    width: 100%;
+    z-index: 90
+}
+nav{
+    display: flex;
+    margin: 5px 20px;
+    justify-content: space-between;
+}
+nav > .leftlogo > img{
+    width: 120px;
+    object-fit: fill;
+    height: 50px;
+}
+.login{
+    margin: 5px 5px;
+    background-color: var(--white);
+    border: none;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+}
+.login:hover{
+    background-color: gold;
+}
+
+/* Login page css style sheet details Ends here */
+
+/* Middle login details */
+
+.middledetails{
+    width: 100%;
+    margin-top: 42px;
+    background-color: var(--white);
+    height: 584px;
+}
+.container{
+    display: flex;
+    padding: 50px 100px;
+    justify-content: space-between;
+}
+.container > img{
+    width: 530px;
+    object-fit: contain;
+    margin-top: 50px;
+    height: 370px;
+}
+.heading{
+    font-size: 40px;
+    font-weight: 900;
+    width: 290px;
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+}
+
+/* Form starts here */
+
+form{
+    width: 350px;
+    padding: 30px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 400px;
+    background-color: var(--white);
+}
+input::placeholder{
+    color: gray;
+    font-weight: 600;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+.email > input{
+    width: 259px;
+    padding: 15px;
+    border-radius: 9px;
+    outline-style: none;
+    border: 1px solid var(--lightgrey); 
+}
+.bi-person-fill{
+    position: relative;
+    right: 35px;
+    color: #0C73EB;
+}
+.password > input{
+    width: 259px;
+    padding: 15px;
+    border-radius: 9px;
+    outline-style: none;
+    border: 1px solid var(--lightgrey);
+}
+.bi-lock-fill{
+    position: relative;
+    right: 35px;
+    color: #0C73EB;
+}
+.confirm_password > input{
+    width: 259px;
+    padding: 15px;
+    border-radius: 9px;
+    outline-style: none;
+    border: 1px solid var(--lightgrey);
+}
+.checkbox{
+    display: flex;
+    position: relative;
+    right: 45px;
+    justify-content: space-evenly; 
+}
+label{
+    display: inline-flex;
+    gap: 5px;
+    margin-top: 5px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    font-size: 12px;  
+}
+span a{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--custom_blue);
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+.loginbtn > input{
+    width: 259px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-family: 'Roboto';
+    border-radius: 9px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--custom_blue);
+}
+.loginbtn > input:hover{
+    background-color: rgb(8, 99, 202);
+}
+.register{
+    font-size: 15px;
+    font-family: 'Roboto';
+}
+.register > a{
+    color: var(--custom_blue);
+    text-decoration: none;
+}
+.register >a:hover{
+    text-decoration: underline;  
+}
+
+/* Form Ends here */
+
+/* footer section starts */
+
+footer{
+    width: 100%;
+    position: fixed;
+    background-color: var(--custom_blue);
+    padding: 25px;
+    bottom: 0;
+}
+.copyright{
+    color: var(--white);
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
+.logotext{
+    color: gold;
+}
+
+/* footer section Ends */
+
+
+

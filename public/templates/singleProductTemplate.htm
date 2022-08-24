@@ -1,0 +1,33 @@
+<!-- <ul>
+    <li>Product name: {{name}}</li>
+    <li>Product Price:
+        <span class="actualPrice abc pqr">{{price}}</span>
+        <span class="afterDiscount">{{discountPrice}}</span>
+    </li>
+    <li>Manufacturer: {{manufacturer}}</li>
+    <li class="productDesc"> Description: {{desc}}</li>
+    <li>Rating: {{rating}}</li>
+    <li>
+        <img src="{{image}}">
+    </li>
+    <li>
+        <input type="button" class="btn btn-primary" value="Add to Cart">
+    </li>
+</ul> -->
+<section class="mainproducts">
+    <div class="singleproducts">
+        <div class="flexitems" data-id="1" >
+            <img class="pimg" src="{{image}}">
+            <h6 class="name"> <a href="">{{name}}</a></h6>
+            <h6 class="price"> &#8377;{{price}} &nbsp; <span class="afterDiscount"><s>( {{discountPercent}} % )</s> </span> </h6> 
+            <h6 class="manufacturer">{{manufacturer}}</h6>
+            <h6 class="desc">{{desc}}</h6>
+            <h6 class="rating"><span class="fa fa-star checked"></span> {{rating}}</h6>
+            <button class="bottombutton">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+
+
+

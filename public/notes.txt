@@ -1,0 +1,40 @@
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="productImage">
+    <input type="button" value="Upload" class="btn btn-secondary" onclick="uploadProductImage()">                
+</form>   
+Sending data:
+var uploadingFile = $('input[name=productImage]')[0].files[0];
+var formData = new FormData(); 
+formData.append("productImage", uploadingFile);
+$.ajax({
+    url: '...',
+    type: '...',
+    data: formData,
+    encytype: 'multipart/form-data',
+    processData: false,
+    contentType: false,
+    dataType: 'JSON',
+    success: (response) => {...
+    }
+});
+Server:
+var fileStorage = multer.diskStorage({
+    destination: function(req, file, callback ) {
+        callback(null, './public/uploads');
+    },
+    filename: function(req, file, callback) {
+        fileName = 'productImage_' + Date.now() + path.extname(file.originalname);
+        // fileName = file.originalname;
+        callback(null, fileName);
+    }
+});
+var upload = multer({ storage: fileStorage }).single('productImage');
+upload(req, res, (error) => {
+    if (error) {
+        data.msg = 'Error while uploading file';
+    } else {
+        data.filepath = 'uploads/' + fileName;
+        data.msg = 'uploaded succesfly';
+    }
+    res.send(JSON.stringify(data));
+});
